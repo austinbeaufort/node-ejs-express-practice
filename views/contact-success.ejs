@@ -27,16 +27,8 @@
 <body>
     <% include partials/nav.ejs %>
     <h1>Contact Us!</h1>
-    <p>Contact the coolest cats on the web right here</p>
-
-    <form method="POST" action="/contact" id="contact-form">
-        <label for="who">Who do you want to contact?</label>
-        <input type="text" name="who" value="<%= qs.person %>">
-        <label for="department">Which department?</label>
-        <input type="text" name="department" value="<%= qs.dept %>">
-        <label for="email">Your email</label>
-        <input type="email" name="email"> 
-        <input type="submit" name="submit">
-    </form>
+    <p>Thanks for getting in touch!</p>
+    <p>You contacted <%= data.who %> in the <%= data.department %> department</p>
+    <p>We will reply to you at <%= data.email %></p>
 </body> 
 </html>
